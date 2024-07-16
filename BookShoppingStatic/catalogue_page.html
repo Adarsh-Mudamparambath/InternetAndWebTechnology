@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Book Store - Catalogue</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        header, nav, footer {
+            padding: 10px;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #4CAF50;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            padding: 20px;
+        }
+        footer {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        img {
+            width: 50px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+  
+    <main>
+        <h2>Book Catalogue</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Cover</th>
+                    <th>Book</th>
+                    <th>Author</th>
+                    <th>Publication</th>
+                    <th>Price</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img src="xml_bible.jpeg" alt="XML Bible"></td>
+                    <td>XML Bible</td>
+                    <td>Winston</td>
+                    <td>Wiley</td>
+                    <td>Rs 40.5</td>
+                    <td><button onclick="addToCart('xml_bible.jpg', 'XML Bible', 'Winston', 40.5)">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td><img src="ai.jpeg" alt="AI"></td>
+                    <td>AI</td>
+                    <td>S. Russel</td>
+                    <td>Princeton Hall</td>
+                    <td>Rs 63</td>
+                    <td><button onclick="addToCart('ai.jpg', 'AI', 'S. Russel', 63)">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td><img src="java2.jpeg" alt="Java 2"></td>
+                    <td>Java 2</td>
+                    <td>Watson</td>
+                    <td>BPB Publications</td>
+                    <td>Rs 35.5</td>
+                    <td><button onclick="addToCart('java2.jpg', 'Java 2', 'Watson', 35.5)">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td><img src="html_24_hours.jpeg" alt="HTML in 24 Hours"></td>
+                    <td>HTML in 24 Hours</td>
+                    <td>Sam Peter</td>
+                    <td>Sam Publication</td>
+                    <td>Rs 50</td>
+                    <td><button onclick="addToCart('html_24_hours.jpg', 'HTML in 24 Hours', 'Sam Peter', 50)">Add to Cart</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+   
+    <script>
+        function addToCart(cover, title, author, price) {
+            const cartItem = {
+                cover: cover,
+                title: title,
+                author: author,
+                price: price
+            };
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push(cartItem);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert('Book added to cart!');
+        }
+    </script>
+</body>
+</html>
