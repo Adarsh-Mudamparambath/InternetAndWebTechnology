@@ -8,6 +8,7 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
+            position: relative; /* Ensure body is relative for absolute positioning */
         }
         header, nav, main, footer {
             padding: 10px;
@@ -26,8 +27,25 @@
         nav a:hover {
             text-decoration: underline;
         }
+        nav button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            padding: 10px 20px;
+            background-color: #f44336; /* Red background for logout */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for 3D effect */
+        }
+        nav button:hover {
+            background-color: #e53935; /* Darker red on hover */
+        }
         main {
             display: flex;
+            margin-top: 50px; /* Add margin-top to avoid overlap with fixed logout button */
         }
         aside {
             width: 200px;
@@ -78,11 +96,9 @@
     </header>
     <nav>
         <a href="description_page.html" target="content">Home</a>
-        <a href="login_page.html" target="content">Login</a>
-        <a href="registration_page.html" target="content">Registration</a>
         <a href="catalogue_page.html" target="content">Catalogue</a>
         <a href="cart_page.html" target="content">Cart</a>
-    </nav>
+        <button onclick="logout()">Logout</button>    </nav>
     <main>
         <aside>
             <h3>Categories</h3>
@@ -100,5 +116,14 @@
     <footer>
         <p>&copy; 2024 Pondicherry University - Book is Knowledge</p>
     </footer>
+    <script>
+        function logout() {
+            
+            window.location.href = 'login_page.html'; // Redirect to login page
+        }
+
+        // Check if user is logged in
+        
+    </script>
 </body>
 </html>

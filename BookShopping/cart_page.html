@@ -35,7 +35,7 @@
             text-decoration: underline;
         }
         main {
-            padding: 20px;
+            padding: 20px; margin-bottom: 100px;
         }
         table {
             width: 100%;
@@ -133,7 +133,7 @@
             cartItems.forEach((item, index) => {
                 const row = document.createElement('tr');
                 row.innerHTML = `
-                    <td><img src="C:/github/InternetAndWebTechnology/BookShoppingStatic/image/${item.cover}" alt="${item.title}" style="width: 50px; height: auto;"></td>
+                    <td><img src="image/${item.cover}" alt="${item.title}" style="width: 50px; height: auto;"></td>
                     <td>${item.title}</td>
                     <td>${item.author}</td>
                     <td>Rs ${item.price}</td>

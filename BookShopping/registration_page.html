@@ -76,7 +76,10 @@
         }
     </style>
 </head>
-<body>
+<body><header>
+    <img src="image/logo.png" alt="Logo" height="50">
+    <h1>Pondicherry University</h1><br>
+</header>
   
     <main>
         <h2>Register</h2>
@@ -96,10 +99,13 @@
             <label for="confirmPassword">Confirm Password:</label>
             <input type="password" id="confirmPassword" name="confirmPassword" required>
 
-            <button type="submit">Register</button>
+            <button type="submit">Register</button>    <br><br>        <a href="login_page.html" class="register-link">Already have Account - Login Now</a>
+
         </form>
     </main>
-   
+    <footer>
+        <p>&copy; 2024 Pondicherry University - Book is Knowledge</p>
+    </footer>
     <script>
         document.getElementById('registrationForm').addEventListener('submit', function(event) {
             event.preventDefault();
