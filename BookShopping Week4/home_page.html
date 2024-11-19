@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Book Store - Home</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            position: relative; /* Ensure body is relative for absolute positioning */
+        }
+        header, nav, main, footer {
+            padding: 10px;
+            text-align: center;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #4CAF50;
+            cursor: pointer; /* Optional: Add cursor pointer for better UX */
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        nav button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            padding: 10px 20px;
+            background-color: #f44336; /* Red background for logout */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for 3D effect */
+        }
+        nav button:hover {
+            background-color: #e53935; /* Darker red on hover */
+        }
+        main {
+            display: flex;
+            margin-top: 50px; /* Add margin-top to avoid overlap with fixed logout button */
+        }
+        aside {
+            width: 200px;
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-right: 1px solid #ccc; /* Adding a border for separation */
+        }
+        section {
+            flex-grow: 1;
+            padding: 10px;
+        }
+        footer {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        iframe {
+            width: 100%;
+            height: calc(100vh - 150px); /* Adjust height as per your layout */
+            border: none;
+        }
+        .categories {
+            list-style-type: none; /* Remove default list bullets */
+            padding: 0;
+        }
+        .categories li {
+            margin-bottom: 10px;
+        }
+        .categories a {
+            display: block;
+            padding: 8px 12px;
+            color: #333;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .categories a:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="image/logo.png" alt="Logo" height="50">
+        <h1>Pondicherry University</h1>
+    </header>
+    <nav>
+        <a href="description_page.html" target="content">Home</a>
+        <a href="catalogue_page.html" target="content">Catalogue</a>
+        <a href="cart_page.html" target="content">Cart</a>
+        <button onclick="logout()">Logout</button>    </nav>
+    <main>
+        <aside>
+            <h3>Categories</h3>
+            <ul class="categories">
+                <li><a href="cse_page.html" target="content">CSE</a></li>
+                <li><a href="ece_page.html" target="content">ECE</a></li>
+                <li><a href="eee_page.html" target="content">EEE</a></li>
+                <li><a href="civil_page.html" target="content">CIVIL</a></li>
+            </ul>
+        </aside>
+        <section>
+            <iframe name="content" src="description_page.html"></iframe>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Pondicherry University - Book is Knowledge</p>
+    </footer>
+    <script>
+        function logout() {
+            
+            window.location.href = 'login_page.html'; // Redirect to login page
+        }
+
+        // Check if user is logged in
+        
+    </script>
+</body>
+</html>
