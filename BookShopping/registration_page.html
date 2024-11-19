@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Online Book Store - Registration</title>
     <style>
+        /* Your existing styles */
         body {
             margin: 0;
             font-family: Arial, sans-serif;
@@ -45,7 +46,7 @@
             margin-bottom: 5px;
             font-weight: bold;
         }
-        input[type="text"], input[type="email"], input[type="password"] {
+        input[type="text"], input[type="email"], input[type="password"], input[type="tel"] {
             width: calc(100% - 22px);
             padding: 10px;
             margin-bottom: 15px;
@@ -74,66 +75,54 @@
             width: 100%;
             bottom: 0;
         }
+        .error {
+            color: red;
+            font-size: 12px;
+        }
     </style>
 </head>
-<body><header>
+<body>
+<header>
     <img src="image/logo.png" alt="Logo" height="50">
     <h1>Pondicherry University</h1><br>
 </header>
-  
-    <main>
-        <h2>Register</h2>
-        <form id="registrationForm">
-            <label for="firstName">First Name:</label>
-            <input type="text" id="firstName" name="firstName" required>
 
-            <label for="lastName">Last Name:</label>
-            <input type="text" id="lastName" name="lastName" required>
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
-
-            <label for="confirmPassword">Confirm Password:</label>
-            <input type="password" id="confirmPassword" name="confirmPassword" required>
-
-            <button type="submit">Register</button>    <br><br>        <a href="login_page.html" class="register-link">Already have Account - Login Now</a>
-
-        </form>
-    </main>
-    <footer>
-        <p>&copy; 2024 Pondicherry University - Book is Knowledge</p>
-    </footer>
-    <script>
-        document.getElementById('registrationForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-
-            const firstName = document.getElementById('firstName').value;
-            const lastName = document.getElementById('lastName').value;
-            const email = document.getElementById('email').value;
-            const password = document.getElementById('password').value;
-            const confirmPassword = document.getElementById('confirmPassword').value;
-
-            if (password !== confirmPassword) {
-                alert('Passwords do not match!');
-                return;
-            }
-
-            const user = {
-                firstName: firstName,
-                lastName: lastName,
-                email: email,
-                password: password
-            };
-
-            localStorage.setItem('user', JSON.stringify(user));
-            alert('Registration successful!');
-
-            // Redirect to login page or home page
-            window.location.href = 'login_page.html';
-        });
-    </script>
+<main>
+    <h2>Register</h2>
+    <form id="registrationForm" action="register.php" method="post">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" required>
+        <div id="firstNameError" class="error"></div>
+    
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" required>
+        <div id="lastNameError" class="error"></div>
+    
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <div id="emailError" class="error"></div>
+    
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <div id="passwordError" class="error"></div>
+    
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" required>
+        <div id="confirmPasswordError" class="error"></div>
+    
+        <label for="phoneNumber">Phone Number:</label>
+        <input type="tel" id="phoneNumber" name="phoneNumber" required>
+        <div id="phoneNumberError" class="error"></div>
+    
+        <button type="submit">Register</button> 
+        <br><br>
+        <a href="login_page.html" class="register-link">Already have an Account? - Login Now</a>
+    </form>
+    
+</main>
+<footer>
+    <p>&copy; 2024 Pondicherry University - Book is Knowledge</p>
+</footer>
+<script src="validation.js"></script>
 </body>
 </html>
