@@ -6,7 +6,7 @@
 - **Week 2**: Book Shopping
 - **Week 3**: Book Shopping
 - **Week 4**: Book Shopping
-- **Week 5**: 
+- **Week 5**: BookInformation
 - **Week 6**: 
 - **Week 7**: food_website
 
