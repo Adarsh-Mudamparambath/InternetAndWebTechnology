@@ -1,0 +1,20 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+
+.author {
+    color: blue;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+td {
+    background-color: #f2f2f2;
+}

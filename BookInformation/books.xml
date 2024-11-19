@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE library SYSTEM "books.dtd">
+<library>
+    <book>
+        <title>Game of Thrones</title>
+        <author>George R. R. Martin</author>
+        <isbn>978-0553103540</isbn>
+        <publisher>Bantam Books</publisher>
+        <edition>First</edition>
+        <price>20.00</price>
+    </book>
+    <book>
+        <title>The Hobbit</title>
+        <author>J.R.R. Tolkien</author>
+        <isbn>978-0618968633</isbn>
+        <publisher>HarperCollins</publisher>
+        <edition>Second</edition>
+        <price>15.00</price>
+    </book>
+</library>
