@@ -8,5 +8,5 @@
 - **Week 4**: Book Shopping
 - **Week 5**: 
 - **Week 6**: 
-- **Week 7**: Food Website
+- **Week 7**: food_website
 
